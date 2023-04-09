@@ -9,15 +9,73 @@
     <link rel="stylesheet" href="../datapage.css" />
     <link rel="stylesheet" href="../topics.css" />
     <script defer src="../fadingAnimation.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../Images/C++.ico" />
   </head>
   <body>
-    <div class="backcontainer">
-      <a href="../../Categories/DynamicMemory.html">
-        <button class="backbutton">←</button>
-      </a>
-    </div>
-    <div class="wip-container">
-      <p class="wip-text">WIP</p>
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simplify CPP - Arrays</title>
+        <link rel="stylesheet" href="../datapage.css" />
+        <script defer src="../fadingAnimation.js"></script>
+      </head>
+      <body>
+        <div class="text-container">
+          <div class="title-box">
+            <p class="category-title">Arrays</p>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">What is an Array?</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                An array is a collection of elements of the same type stored in
+                contiguous memory locations. It provides a way to store and
+                access multiple values of the same type using a single variable
+                name.
+              </p>
+              <p class="subtle-fade">
+                In C++, arrays are declared by specifying the data type of the
+                elements, followed by the name of the array and the number of
+                elements in square brackets. For example, to declare an array of
+                integers with 5 elements:
+              </p>
+              <pre><code>int myArray[5];</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">How Does an Array Work?</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                When an array is declared, a block of contiguous memory
+                locations is allocated to hold the elements of the array. The
+                elements can be accessed using their index, which starts from 0
+                for the first element and goes up to the size of the array minus
+                1 for the last element.
+              </p>
+              <p class="subtle-fade">
+                For example, to assign a value to the second element of the
+                array:
+              </p>
+              <pre><code>myArray[1] = 42;</code></pre>
+              <p class="subtle-fade">
+                To access the elements of the array in a loop, you can use the
+                size of the array to control the number of iterations:
+              </p>
+              <pre><code>for (int i = 0; i &lt; 5; i++) {
+  myArray[i] = i * i;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
   </body>
 </html>

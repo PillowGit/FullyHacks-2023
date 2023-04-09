@@ -9,15 +9,92 @@
     <link rel="stylesheet" href="../datapage.css" />
     <link rel="stylesheet" href="../topics.css" />
     <script defer src="../fadingAnimation.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../Images/C++.ico" />
+  </head>
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplify CPP - Linked Lists</title>
+    <link rel="stylesheet" href="../datapage.css" />
+    <script defer src="../fadingAnimation.js"></script>
   </head>
   <body>
-    <div class="backcontainer">
-      <a href="../../Categories/DynamicMemory.html">
-        <button class="backbutton">←</button>
-      </a>
-    </div>
-    <div class="wip-container">
-      <p class="wip-text">WIP</p>
-    </div>
-  </body>
+    <div class="text-container">
+      <div class="title-box">
+        <p class="category-title">Linked Lists</p>
+      </div>
+
+      <!-- Singly Linked List Section -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title">Singly Linked List</p>
+        </div>
+        <div class="plain-text">
+          <p class="subtle-fade">
+            A singly linked list is a data structure consisting of a sequence of nodes, where each node stores a value and a reference to the next node in the list. The first node is called the head and the last node is called the tail. Singly linked lists are useful for implementing stacks and queues and for solving other problems that involve sequential access to data.
+          </p>
+          <p class="subtle-fade">
+            Here is an example of how to create a singly linked list in C++:
+          </p>
+          <pre><code>struct Node {
+  int data;
+  Node* next;
+};
+
+class LinkedList {
+public:
+  LinkedList() : head(nullptr) {}
+
+  void push_front(int data) {
+    Node* node = new Node{data, head};
+    head = node;
+  }
+
+  void pop_front() {
+    if (head) {
+      Node* node = head;
+      head = head->next;
+      delete node;
+    }
+  }
+
+private:
+  Node* head;
+};</code></pre>
+          <p class="subtle-fade">
+            In the above implementation, push_front adds a new node to the beginning of the list, and pop_front removes the first node from the list.
+          </p>
+          <p class="subtle-fade">
+            The time complexity for inserting or deleting a node at the front of a singly linked list is O(1). However, finding the nth node in the list or accessing a node in the middle of the list has a time complexity of O(n).
+          </p>
+        </div>
+      </div>
+
+      <!-- Doubly Linked List Section -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title">Doubly Linked List</p>
+        </div>
+        <div class="plain-text">
+          <p class="subtle-fade">
+            A doubly linked list is a type of linked list where each node has two references, one to the next node and one to the previous node. This allows for traversal in both directions. Doubly linked lists are useful when you need to traverse a list in both directions or when you need to delete a node in the middle of the list efficiently.
+          </p>
+          <p class="subtle-fade">
+            Here is an example of how to create a doubly linked list in C++:
+          </p>
+          <pre><code>struct Node {
+  int data;
+  Node* next;
+  Node* prev;
+};
+
+class DoublyLinkedList {
+public:
+  DoublyLinkedList() : head(nullptr), tail(nullptr) {}
+
+  void push_front(int data) {
+    Node
 </html>
