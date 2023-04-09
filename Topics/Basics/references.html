@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplify CPP - References</title>
+    <link rel="stylesheet" href="../datapage.css" />
+    <script defer src="../fadingAnimation.js"></script>
+  </head>
+  <body>
+
+    <!-- Category -->
+    <div class="text-container"> 
+      <div class="title-box">
+        <p class="category-title"> C++ References </p>   
+      </div>
+
+      <!-- Section 1 -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title"> What is a Reference? </p>
+        </div>
+
+        <!-- Paragraph 1 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            In C++, a reference is an alias for an existing variable. A reference variable provides an alternative name for the original variable, allowing it to be accessed and modified through that name. Unlike pointers, references cannot be reassigned, and they must be initialized when they are declared.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title"> How to Declare and Initialize a Reference </p>
+        </div>
+
+        <!-- Paragraph 2 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            To declare a reference, you need to use the ampersand (&) symbol followed by the reference variable name. The reference variable must be initialized with an existing variable at the time of declaration.
+            
+            <br><br>
+            Example:
+            <pre><code>int num = 42;
+int& numRef = num;</code></pre>
+            
+            In this example, 'numRef' is a reference to the variable 'num'. Any changes made to 'numRef' will also affect 'num'.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title"> How to Use a Reference </p>
+        </div>
+
+        <!-- Paragraph 3 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            Once a reference has been initialized, you can use it just like the original variable. Here is an example demonstrating how to use a reference:
+
+            <br><br>
+            Example:
+            <pre><code>int num = 42;
+int& numRef = num;
+
+numRef = 10; // This will change the value of 'num' to 10</code></pre>
+
+            In this example, 'numRef' is used to modify the value of 'num'. The value of 'num' becomes 10 after the assignment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title"> Passing References to Functions </p>
+        </div>
+
+        <!-- Paragraph 4 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            One common use case for references is passing them as arguments to functions. This allows the function to modify the original variable passed as an argument, rather than working
+      
+             <!-- Paragraph 4 continued -->
+          <p class="subtle-fade">
+            Example:
+            <pre><code>void increment(int& num) {
+  num++;
+}
+
+int main() {
+  int value = 5;
+  increment(value);
+  // The value of 'value' is now 6
+}</code></pre>
+
+            In this example, the 'increment()' function takes a reference to an integer as its parameter. When the 'value' variable is passed to the function, the function modifies the original variable directly, increasing its value by 1.
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section">
+        <div class="section-header">
+          <p class="section-title"> Limitations of References </p>
+        </div>
+
+        <!-- Paragraph 5 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            While references can be quite useful in certain situations, they also have some limitations:
+
+            <ul class="bullet-points">
+              <li> A reference must be initialized when declared, and it cannot be left uninitialized. </li>
+              <li> Once a reference is initialized, it cannot be changed to refer to another variable. </li>
+              <li> There is no such thing as a null reference, unlike pointers which can be set to nullptr. </li>
+              <li> You cannot create an array of references. </li>
+            </ul>
+
+            Despite these limitations, references can be a powerful tool when used correctly, providing a more convenient and safer way to work with aliases than raw pointers.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </body>
+</html>

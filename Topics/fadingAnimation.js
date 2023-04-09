@@ -8,8 +8,5 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const sections = document.querySelectorAll(".section");
+const sections = document.querySelectorAll(".subtle-fade");
 sections.forEach((el) => observer.observe(el));
-
-const subSections = document.querySelectorAll(".sub-section");
-subSections.forEach((el) => observer.observe(el));

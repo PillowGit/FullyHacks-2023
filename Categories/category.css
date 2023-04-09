@@ -1,0 +1,195 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.maincategorytitle {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  height: 100px;
+  top: 50px;
+}
+
+.maincategorytext {
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 75px;
+  color: white;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: all 250ms ease-in-out;
+}
+
+.sidebar .openbutton {
+  position: absolute;
+  top: 20px;
+  right: -70px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.openbutton {
+  position: absolute;
+  border: 1px solid black;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 37px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.openbutton:hover {
+  background-color: black;
+  color: white;
+}
+
+.sidebar .openbutton span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar .openbutton:hover span {
+  background: transparent;
+}
+
+.sidebar.active {
+  z-index: 2;
+  left: 0px;
+}
+
+.closebutton,
+.backbutton {
+  height: 45px;
+  position: relative;
+}
+
+.closecontainer,
+.backcontainer {
+  position: relative;
+  text-align: right;
+  top: 20px;
+}
+
+.backcontainer {
+  text-align: left;
+}
+
+.closebutton,
+.backbutton {
+  right: 25px;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.backbutton {
+  right: -25px;
+  height: 50px;
+}
+
+.closebutton:hover,
+.backbutton:hover {
+  background-color: white;
+  color: black;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  line-height: 80px;
+  padding: 0.25rem;
+  text-align: center;
+  transition: ls;
+}
+
+.buttons {
+  position: relative;
+  top: 75px;
+}
+
+.buttonlayout {
+  border: none;
+  color: white;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.buttonlayout:hover {
+  background-color: white;
+  color: black;
+}
+
+.title {
+  position: relative;
+  top: 250px;
+  margin: auto;
+  text-align: center;
+}
+
+.titletext {
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 75px;
+  color: rgb(73, 73, 73);
+}
+
+.period {
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  color: black;
+  line-height: 25px;
+  font-weight: bold;
+}
