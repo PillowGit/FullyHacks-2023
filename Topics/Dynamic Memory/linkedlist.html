@@ -12,89 +12,127 @@
     <link rel="icon" type="image/x-icon" href="../../Images/C++.ico" />
   </head>
   <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simplify CPP - Linked Lists</title>
-    <link rel="stylesheet" href="../datapage.css" />
-    <script defer src="../fadingAnimation.js"></script>
-  </head>
-  <body>
-    <div class="text-container">
-      <div class="title-box">
-        <p class="category-title">Linked Lists</p>
-      </div>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Simplify CPP - Linked Lists</title>
+      <link rel="stylesheet" href="../datapage.css" />
+      <script defer src="../fadingAnimation.js"></script>
+    </head>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simplify CPP - Linked Lists</title>
+        <link rel="stylesheet" href="../datapage.css" />
+        <script defer src="../fadingAnimation.js"></script>
+      </head>
+      <body>
+        <div class="text-container">
+          <div class="title-box">
+            <p class="category-title">Linked Lists</p>
+          </div>
 
-      <!-- Singly Linked List Section -->
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title">Singly Linked List</p>
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">What are Linked Lists?</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                A linked list is a linear data structure that stores a sequence
+                of elements, called nodes, in which each node stores a value and
+                a pointer to the next node in the list. The first node is called
+                the head of the list.
+              </p>
+              <p class="subtle-fade">
+                Unlike arrays, linked lists can grow or shrink in size
+                dynamically, without the need for expensive operations such as
+                resizing or shifting. This makes them more flexible for certain
+                applications, such as implementing stacks, queues, or other
+                dynamic data structures.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">Singly vs Doubly Linked Lists</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                There are two main types of linked lists: singly linked lists
+                and doubly linked lists. In a singly linked list, each node
+                stores a value and a pointer to the next node in the list. This
+                means you can only traverse the list in one direction, from the
+                head to the tail. In a doubly linked list, each node stores a
+                value, a pointer to the next node, and a pointer to the previous
+                node. This allows you to traverse the list in both directions,
+                from the head to the tail and from the tail to the head.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">How Linked Lists Work</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                To create a linked list, you start by creating the head node,
+                which contains the first value in the list and a pointer to the
+                next node. You can then create additional nodes and add them to
+                the list by updating the pointers in the existing nodes. To
+                remove a node from the list, you update the pointers in the
+                previous and next nodes to bypass the node you want to remove.
+              </p>
+              <p class="subtle-fade">
+                Linked lists can be implemented using classes or structs in C++,
+                with each node represented by an object that contains the node's
+                value and pointers to the previous and next nodes. Inserting,
+                deleting, and traversing the list requires updating these
+                pointers accordingly.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <p class="section-title">Benefits of Linked Lists</p>
+            </div>
+            <div class="plain-text">
+              <p class="subtle-fade">
+                Linked lists offer several benefits over other data structures,
+                such as arrays:
+              </p>
+              <ul class="subtle-fade">
+                <li>
+                  Dynamic size: Linked lists can grow or shrink in size as
+                  needed, without the need for expensive resizing operations.
+                </li>
+                <li>
+                  Insertion and deletion: Inserting or deleting an element in a
+                  linked list requires updating only a few pointers, whereas in
+                  an array it may require shifting many elements.
+                </li>
+                <li>
+                  Flexibility: Linked lists can be used to implement a variety
+                  of dynamic data structures, such as stacks, queues, and hash
+                  tables.
+                </li>
+                <li>
+                  Memory efficiency: Linked lists can be more memory efficient
+                  than arrays, especially for sparse data or large data sets
+                  where only a small portion of the elements are used.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="plain-text">
-          <p class="subtle-fade">
-            A singly linked list is a data structure consisting of a sequence of nodes, where each node stores a value and a reference to the next node in the list. The first node is called the head and the last node is called the tail. Singly linked lists are useful for implementing stacks and queues and for solving other problems that involve sequential access to data.
-          </p>
-          <p class="subtle-fade">
-            Here is an example of how to create a singly linked list in C++:
-          </p>
-          <pre><code>struct Node {
-  int data;
-  Node* next;
-};
-
-class LinkedList {
-public:
-  LinkedList() : head(nullptr) {}
-
-  void push_front(int data) {
-    Node* node = new Node{data, head};
-    head = node;
-  }
-
-  void pop_front() {
-    if (head) {
-      Node* node = head;
-      head = head->next;
-      delete node;
-    }
-  }
-
-private:
-  Node* head;
-};</code></pre>
-          <p class="subtle-fade">
-            In the above implementation, push_front adds a new node to the beginning of the list, and pop_front removes the first node from the list.
-          </p>
-          <p class="subtle-fade">
-            The time complexity for inserting or deleting a node at the front of a singly linked list is O(1). However, finding the nth node in the list or accessing a node in the middle of the list has a time complexity of O(n).
-          </p>
-        </div>
-      </div>
-
-      <!-- Doubly Linked List Section -->
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title">Doubly Linked List</p>
-        </div>
-        <div class="plain-text">
-          <p class="subtle-fade">
-            A doubly linked list is a type of linked list where each node has two references, one to the next node and one to the previous node. This allows for traversal in both directions. Doubly linked lists are useful when you need to traverse a list in both directions or when you need to delete a node in the middle of the list efficiently.
-          </p>
-          <p class="subtle-fade">
-            Here is an example of how to create a doubly linked list in C++:
-          </p>
-          <pre><code>struct Node {
-  int data;
-  Node* next;
-  Node* prev;
-};
-
-class DoublyLinkedList {
-public:
-  DoublyLinkedList() : head(nullptr), tail(nullptr) {}
-
-  void push_front(int data) {
-    Node
+      </body>
+    </html>
+  </html>
 </html>
