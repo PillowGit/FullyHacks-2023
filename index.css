@@ -33,6 +33,7 @@ body {
   height: 2px;
   background: black;
   transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
 }
 
 .sidebar .togglebutton span:nth-child(1) {
@@ -73,7 +74,7 @@ body {
 
 .sidebar.active .togglebutton span:nth-child(1) {
   top: 50%;
-  transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .sidebar.active .togglebutton span:nth-child(2) {
@@ -82,5 +83,5 @@ body {
 
 .sidebar.active .togglebutton span:nth-child(3) {
   top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(45deg);
 }
