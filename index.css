@@ -18,16 +18,37 @@ body {
   transition: all 250ms ease-in-out;
 }
 
-.sidebar .togglebutton {
+.sidebar .openbutton {
   position: absolute;
-  top: 10px;
-  right: -40px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  right: -70px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
-.sidebar .togglebutton span {
+.openbutton {
+  position: absolute;
+  border: 1px solid black;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 37px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.openbutton:hover {
+  background-color: black;
+  color: white;
+}
+
+.sidebar .openbutton span {
   position: absolute;
   width: 100%;
   height: 2px;
@@ -36,43 +57,13 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
-.sidebar .togglebutton:hover span {
-  background: white;
-}
-
-.sidebar .togglebutton span:nth-child(1) {
-  top: 10%;
-}
-
-.sidebar .togglebutton span:nth-child(2) {
-  top: 50%;
-}
-
-.sidebar .togglebutton span:nth-child(3) {
-  top: 90%;
+.sidebar .openbutton:hover span {
+  background: transparent;
 }
 
 .sidebar.active {
   z-index: 2;
   left: 0px;
-}
-
-.sidebar.active .togglebutton span {
-  background: white;
-}
-
-.sidebar.active .togglebutton span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.sidebar.active .togglebutton span:nth-child(2) {
-  display: none;
-}
-
-.sidebar.active .togglebutton span:nth-child(3) {
-  top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
 }
 
 .closebutton {

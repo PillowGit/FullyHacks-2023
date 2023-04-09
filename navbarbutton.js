@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".togglebutton");
+  const toggleButton = document.querySelector(".openbutton");
   const sidebar = document.querySelector(".sidebar");
   const closeBtn = document.querySelector(".closebutton");
 
