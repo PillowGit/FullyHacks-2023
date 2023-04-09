@@ -49,7 +49,7 @@ body {
 }
 
 .show {
-  border: 0px solid mediumpurple;
+  border: 3px dashed #4f4557;
   display: grid;
   place-items: center;
   align-content: center;
