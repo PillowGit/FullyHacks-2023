@@ -1,0 +1,45 @@
+.closebutton,
+.backbutton {
+  height: 45px;
+  position: relative;
+}
+
+.closecontainer,
+.backcontainer {
+  position: relative;
+  text-align: right;
+  top: 12px;
+}
+
+.backcontainer {
+  text-align: left;
+  left: -5px;
+}
+
+.closebutton,
+.backbutton {
+  right: -10px;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.backbutton {
+  right: -25px;
+  height: 50px;
+}
+
+.closebutton:hover,
+.backbutton:hover {
+  background-color: white;
+  color: black;
+}
