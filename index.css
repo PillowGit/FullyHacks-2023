@@ -36,44 +36,29 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
+.sidebar .togglebutton:hover span {
+  background: white;
+}
+
 .sidebar .togglebutton span:nth-child(1) {
-  top: 0%;
+  top: 10%;
 }
 
 .sidebar .togglebutton span:nth-child(2) {
-  top: 45%;
+  top: 50%;
 }
 
 .sidebar .togglebutton span:nth-child(3) {
   top: 90%;
 }
 
-.sidebar .link a {
-  display: block;
-  padding: 15px 10px;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  border-bottom: none;
-}
-
-.sidebar .link a.active,
-.sidebar .link a:hover {
-  background-color: #222;
-  color: #00acee;
-}
-
-.sidebar .links a i {
-  display: inline-flex;
-  margin-right: 10px;
-}
-
 .sidebar.active {
+  z-index: 2;
   left: 0px;
 }
 
 .sidebar.active .togglebutton span {
-  background: white; /* Update color to white */
+  background: white;
 }
 
 .sidebar.active .togglebutton span:nth-child(1) {
@@ -88,4 +73,103 @@ body {
 .sidebar.active .togglebutton span:nth-child(3) {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
+}
+
+.closebutton {
+  height: 45px;
+  position: relative;
+}
+
+.closecontainer {
+  position: relative;
+  text-align: right;
+  top: 20px;
+}
+
+.closebutton {
+  right: 25px;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.closebutton:hover {
+  background-color: white;
+  color: black;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  line-height: 80px;
+  padding: 0.25rem;
+  text-align: center;
+  transition: ls;
+}
+
+.buttons {
+  position: relative;
+  top: 100px;
+}
+
+.buttonlayout {
+  border: none;
+  color: white;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.buttonlayout:hover {
+  background-color: white;
+  color: black;
+}
+
+.title {
+  position: relative;
+  top: 250px;
+  margin: auto;
+  text-align: center;
+}
+
+.titletext {
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 75px;
+  color: rgb(73, 73, 73);
+}
+
+.period {
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  color: black;
+  line-height: 25px;
+  font-weight: bold;
 }
