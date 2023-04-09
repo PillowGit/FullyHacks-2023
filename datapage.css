@@ -14,14 +14,30 @@ body {
   display: grid;
   place-items: center;
   align-content: center;
+  text-align: center;
+  max-height: 140px;
   min-height: 0vh;
-  margin-bottom: -50px;
+  margin-bottom: 20px;
+  /* border: 1px solid purple; */
+}
+
+.category-title {
+  /* border: 1px solid red; */
+  font-size: 80px;
+  font-weight: 10000 px;
+}
+
+.section-title{
+    font-size: 50px;
+    font-weight: 500;
+    max-height: 120px;
+    min-height: 0vh;
+    margin-bottom: 20px;
 }
 
 .section {
   display: grid;
   place-items: center;
-  align-content: center;
   min-height: 0vh;
 }
 
@@ -48,9 +64,37 @@ body {
 }
 
 .plain-text {
-  padding: 16rem;
+  padding-top: 16rem;
   font-size: 25px;
+  font-weight: 100;
   text-align: center;
   margin-top: -275px;
   margin-bottom: -250px;
+  padding-bottom: 16rem;
+  max-width: 70%;
 }
+
+.bullet-points {
+  text-align: left;
+  display: grid;
+  place-items: center;
+  /* border: 8px solid blue; */
+}
+
+.middle-li {
+  text-align: left;
+  /* border: 3px solid red;*/
+  width: 20%;
+}
+
+.left-li {
+  text-align: left;
+  /* border: 3px solid red;*/
+  width: 60%;
+}
+
+.resize-img {
+    width: 50%;
+    height: auto;
+}
+  
