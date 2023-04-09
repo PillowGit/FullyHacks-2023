@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../datapage.css" />
     <link rel="stylesheet" href="../topics.css" />
     <script defer src="../fadingAnimation.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../Images/C++.ico" />
   </head>
   <body>
     <div class="backcontainer">
@@ -16,8 +17,74 @@
         <button class="backbutton">←</button>
       </a>
     </div>
-    <div class="wip-container">
-      <p class="wip-text">WIP</p>
+  <div class="section">
+    <div class="section-header">
+      <p class="section-title">What is the Stack?</p>
     </div>
-  </body>
+    <div class="plain-text">
+      <p class="subtle-fade">
+        The stack is a region of memory that stores temporary data created by functions and local variables. It is a LIFO (last-in, first-out) data structure, which means that the last item added to the stack is the first one to be removed. When a function is called, a block of memory is allocated on the stack to hold the function's arguments, local variables, and return address. When the function returns, the memory is deallocated from the stack, and the program resumes execution from the return address.
+      </p>
+      <p class="subtle-fade">
+        The stack is usually limited in size and can cause a stack overflow error if too much data is stored on it. It is also faster to access than the heap because it uses a simple pointer manipulation to allocate and deallocate memory.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <p class="section-title">What is the Heap?</p>
+    </div>
+    <div class="plain-text">
+      <p class="subtle-fade">
+        The heap is a region of memory that stores dynamic data created by the program using the new operator in C++ or the malloc function in C. Unlike the stack, the heap is not limited in size, and data can be allocated and deallocated in any order. The heap is also slower to access than the stack because it requires more complex pointer manipulation to allocate and deallocate memory.
+      </p>
+      <p class="subtle-fade">
+        It is important to note that the heap must be managed manually, which means that the programmer must keep track of which data is allocated and deallocated and ensure that there are no memory leaks or invalid memory accesses. Failure to manage the heap correctly can lead to serious problems such as segmentation faults, memory leaks, and undefined behavior.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <p class="section-title">How are the Stack and Heap Used?</p>
+    </div>
+    <div class="plain-text">
+      <p class="subtle-fade">
+        The stack is used to store temporary data created by functions and local variables. This includes function parameters, return addresses, and local variables. The stack is automatically managed by the program, and data is automatically deallocated when the function returns or the local variable goes out of scope.
+      </p>
+      <p class="subtle-fade">
+        The heap is used to store dynamic data that needs to be allocated and deallocated at runtime. This includes arrays, structures
+        <div class="section">
+          <div class="section-header">
+            <p class="section-title">Benefits and Drawbacks of the Stack and Heap</p>
+          </div>
+          <div class="plain-text">
+            <p class="subtle-fade">
+              The stack and heap both have their own benefits and drawbacks, depending on the use case:
+            </p>
+            <ul class="subtle-fade">
+              <li>Stack:
+                <ul>
+                  <li>Faster to access than the heap</li>
+                  <li>Automatically managed by the program</li>
+                  <li>Limited in size</li>
+                  <li>Can cause stack overflow errors</li>
+                  <li>Only suitable for storing temporary data</li>
+                </ul>
+              </li>
+              <li>Heap:
+                <ul>
+                  <li>Not limited in size</li>
+                  <li>Can store dynamic data</li>
+                  <li>Manually managed by the programmer</li>
+                  <li>Slower to access than the stack</li>
+                  <li>Can cause memory leaks and other problems if not managed correctly</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </body>  
 </html>
