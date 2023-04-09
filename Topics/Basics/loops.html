@@ -51,16 +51,27 @@
             code that will alter the result of the expression, otherwise, it will run infinitely and the 
             program will crash.
           </p>
+
+          <p class="subtle-fade">
+            An example of a while loop looks like:
+          </p>
+
+          <p class="subtle-fade">
+            <div class="center-text">
+              while (alive == true) { // Code here... } 
+            </div>
+          </p>
+
         </div>
       </div>
   
-      <!-- Section 3 -->
+      <!-- FOR LOOP -->
       <div class="section">
         <div class="section-header">
           <p class="section-title"> For Loop </p>
         </div>
 
-        <!-- Paragraph 3 -->
+        <!-- TEXT -->
         <div class="plain-text">
           <p class="subtle-fade">
             The most commonly used loop by far is the for loop. The major advantage of a for loop is that 
@@ -69,7 +80,7 @@
             example of a for loop being used is
             
             <div class="center-text">
-              for (int i = 0; i < numbers.size(); i++) { // Code here… }
+              for (int i = 0; i < numbers.size(); i++) { // Code here... }
             </div>
           </p>
 
@@ -80,7 +91,7 @@
         </div>
       </div>
 
-      <!-- Section 4 -->
+      <!-- RANGED BASED FOR LOOP -->
       <div class="section">
         <div class="section-header">
             <div class="subtle-fade">
@@ -100,11 +111,13 @@
           <p class="subtle-fade">
             Here is the syntax for a range-based for loop that loops through all the numbers 
             in the array “numbers”
-
+            
             <div class="center-text">
               for (int x : numbers) { // Code here… }
             </div>
+          </p>
 
+          <p class="subtle-fade">
             What does this do for us? Well, for every element inside of numbers, we are extracting 
             the value, putting it into x, and calling our loop code with the value stored in x. Then 
             in the next iteration, it extracts the next value, and so on. It's magic!
