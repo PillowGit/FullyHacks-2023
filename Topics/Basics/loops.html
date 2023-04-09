@@ -11,67 +11,45 @@
   </head>
   <body>
 
-    <!-- Category -->
+    <!-- LOOPS -->
     <div class="text-container"> 
       <div class="title-box">
-        <p class="category-title"> Objects + Classes </p>   
+        <p class="category-title"> Loops </p>   
       </div>
 
-      <!-- Section 1 -->
+      <!-- What is a Loop? -->
       <div class="section">
         <div class="section-header">
-          <p class="section-title"> What is an Object? </p>
+          <p class="section-title"> What is a Loop? </p>
         </div>
 
         <!-- Paragraph 1 -->
         <!-- "p" - paragraphs -->
         <div class="plain-text">
           <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper. Est potenti inceptos posuere
-            vivamus phasellus duis aliquam maecenas curabitur quisque justo
-            vehicula. Libero magna eleifend elit diam orci cursus arcu primis.
-            Suspendisse faucibus nunc dignissim nullam fermentum lacinia feugiat
-            mi imperdiet diam. Elit venenatis proin lacinia. Nisi velit non
-            consectetur viverra taciti eleifend class. Vel massa turpis lorem
-            nascetur maecenas egestas sapien duis. Dui per felis nunc sed. Sed
-            mi sem porttitor. Etiam convallis nisl luctus vivamus hac cursus
-            tortor? Magnis blandit aliquet suspendisse dis netus non interdum!
-            Tempus varius sodales nibh. Fermentum ullamcorper fusce nulla nisi
-            euismod mauris pellentesque orci nunc vitae. Tristique quis congue
-            quisque gravida. Torquent ante posuere montes sociis tempus nibh
-            lectus. Risus nibh sit nec molestie tincidunt eget taciti netus.
+            A loop is a way for you to repeatedly run the same code for a specified amount of time.
+	          The most common use of loops is to look through each element in a list of items one by 
+            one, but they can be used in many different situations. 
           </p>
         </div>
+        
       </div>
 
       <!-- Section 2 -->
       <div class="section">
         <div class="section-header">
-          <p class="section-title"> What is an Object? </p>
+          <p class="section-title"> While Loop </p>
         </div>
 
         <!-- Paragraph 2 -->
         <div class="plain-text">
           <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper. Est potenti inceptos posuere
-            vivamus phasellus duis aliquam maecenas curabitur quisque justo
-            vehicula. Libero magna eleifend elit diam orci cursus arcu primis.
-            Suspendisse faucibus nunc dignissim nullam fermentum lacinia feugiat
-            mi imperdiet diam. Elit venenatis proin lacinia. Nisi velit non
-            consectetur viverra taciti eleifend class. Vel massa turpis lorem
-            nascetur maecenas egestas sapien duis. Dui per felis nunc sed. Sed
-            mi sem porttitor. Etiam convallis nisl luctus vivamus hac cursus
-            tortor? Magnis blandit aliquet suspendisse dis netus non interdum!
-            Tempus varius sodales nibh. Fermentum ullamcorper fusce nulla nisi
-            euismod mauris pellentesque orci nunc vitae. Tristique quis congue
-            quisque gravida. Torquent ante posuere montes sociis tempus nibh
-            lectus. Risus nibh sit nec molestie tincidunt eget taciti netus.
+            In theory, a while loop is extremely easy to use. Going back to the idea of if statements, 
+            a while loop will continue running the code in the brackets as long as the expression it is 
+            given evaluates to true. As soon as the expression evaluates to false, the loop is exited. 
+            The catch here is that to properly use a while loop, the loop should have something in its 
+            code that will alter the result of the expression, otherwise, it will run infinitely and the 
+            program will crash.
           </p>
         </div>
       </div>
@@ -79,28 +57,26 @@
       <!-- Section 3 -->
       <div class="section">
         <div class="section-header">
-          <p class="section-title"> Common C++ Data Types </p>
+          <p class="section-title"> For Loop </p>
         </div>
 
         <!-- Paragraph 3 -->
         <div class="plain-text">
           <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper.
-
-             <!-- Unordered List - (Bullet Points) -->
-             <div class="subtle-fade">
-            <ul class="bullet-points"> <div class = "middle-list">
-              <li> std::string </li>
-              <li> int </li>
-              <li> double </li>
+            The most commonly used loop by far is the for loop. The major advantage of a for loop is that 
+            in a single declaration, you can create a variable for your loop to use, provide an expression 
+            so your loop knows when to stop, and a command to be run after each iteration. The most common 
+            example of a for loop being used is
+            
+            <div class="center-text">
+              for (int i = 0; i < numbers.size(); i++) { // Code here… }
             </div>
-            </ul>
-          </div>
-
           </p>
+
+          <p class="subtle-fade">
+            This creates a loop where i is every valid index in the vector “numbers”!
+          </p>
+
         </div>
       </div>
 
@@ -108,9 +84,35 @@
       <div class="section">
         <div class="section-header">
             <div class="subtle-fade">
-            <p class="section-title"> What is an Object? </p>
+            <p class="section-title"> Range-Based For Loop </p>
+            </div>
         </div>
-        </div>          
+        
+        <!-- Paragraph 3 -->
+        <div class="plain-text">
+          <p class="subtle-fade">
+            You will learn how exactly this works in 131 and beyond, but for now, consider this 
+            C++ magic bestowed upon us by the gods. If you understand Python well, then a C++ 
+            range-based for loop works exactly the same way that looping through an iterable 
+            object does there. If you do not know Python, do not worry.
+          </p>
+
+          <p class="subtle-fade">
+            Here is the syntax for a range-based for loop that loops through all the numbers 
+            in the array “numbers”
+
+            <div class="center-text">
+              for (int x : numbers) { // Code here… }
+            </div>
+
+            What does this do for us? Well, for every element inside of numbers, we are extracting 
+            the value, putting it into x, and calling our loop code with the value stored in x. Then 
+            in the next iteration, it extracts the next value, and so on. It's magic!
+          </p>
+
+        </div>
       </div>
+
+
   </body>
 </html>

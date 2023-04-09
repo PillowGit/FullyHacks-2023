@@ -4,114 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simplify CPP - Rule of 3</title>
+    <title>Simplify CPP - The Rule of Three</title>
     <link rel="stylesheet" href="../datapage.css" />
     <script defer src="../fadingAnimation.js"></script>
   </head>
   <body>
-
-    <!-- Category -->
-    <div class="text-container"> 
+    <div class="text-container">
       <div class="title-box">
-        <p class="category-title"> Objects + Classes </p>   
+        <p class="category-title">The Rule of Three</p>
       </div>
 
-      <!-- Section 1 -->
       <div class="section">
         <div class="section-header">
-          <p class="section-title"> What is an Object? </p>
+          <p class="section-title">What is the Rule of Three?</p>
         </div>
-
-        <!-- Paragraph 2 -->
-        <!-- "p" - paragraphs -->
         <div class="plain-text">
           <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper. Est potenti inceptos posuere
-            vivamus phasellus duis aliquam maecenas curabitur quisque justo
-            vehicula. Libero magna eleifend elit diam orci cursus arcu primis.
-            Suspendisse faucibus nunc dignissim nullam fermentum lacinia feugiat
-            mi imperdiet diam. Elit venenatis proin lacinia. Nisi velit non
-            consectetur viverra taciti eleifend class. Vel massa turpis lorem
-            nascetur maecenas egestas sapien duis. Dui per felis nunc sed. Sed
-            mi sem porttitor. Etiam convallis nisl luctus vivamus hac cursus
-            tortor? Magnis blandit aliquet suspendisse dis netus non interdum!
-            Tempus varius sodales nibh. Fermentum ullamcorper fusce nulla nisi
-            euismod mauris pellentesque orci nunc vitae. Tristique quis congue
-            quisque gravida. Torquent ante posuere montes sociis tempus nibh
-            lectus. Risus nibh sit nec molestie tincidunt eget taciti netus.
+            The Rule of Three is a guideline in C++ that states if a class needs
+            to define one of the following special member functions, it should
+            probably define all three:
+          </p>
+          <ul class="bullet-points">
+            <li>Copy constructor</li>
+            <li>Copy assignment operator</li>
+            <li>Destructor</li>
+          </ul>
+          <p class="subtle-fade">
+            These functions are required when a class manages a resource such as
+            memory, file handles, or network connections, and you need to define
+            how these resources are handled during copying and destruction.
+          </p>
+          <p class="subtle-fade">
+            For example, consider a class that manages a dynamically allocated
+            array:
+          </p>
+          <pre><code>class DynamicArray {
+public:
+  DynamicArray(size_t size) : size_(size), data_(new int[size]) {}
+
+  // Copy constructor
+  DynamicArray(const DynamicArray& other) : size_(other.size_), data_(new int[other.size_]) {
+    std::copy(other.data_, other.data_ + size_, data_);
+  }
+
+  // Copy assignment operator
+  DynamicArray& operator=(const DynamicArray& other) {
+    if (this != &other) {
+      delete[] data_;
+      size_ = other.size_;
+      data_ = new int[size_];
+      std::copy(other.data_, other.data_ + size_, data_);
+    }
+    return *this;
+  }
+
+  // Destructor
+  ~DynamicArray() {
+    delete[] data_;
+  }
+
+private:
+  size_t size_;
+  int* data_;
+};</code></pre>
+          <p class="subtle-fade">
+            In this example, the class follows the Rule of Three by defining a
+            copy constructor, copy assignment operator, and destructor to handle
+            the memory allocation and deallocation properly.
           </p>
         </div>
       </div>
-
-      <!-- Section 2 -->
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title"> What is an Object? </p>
-        </div>
-
-        <!-- Paragraph 2 -->
-        <div class="plain-text">
-          <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper. Est potenti inceptos posuere
-            vivamus phasellus duis aliquam maecenas curabitur quisque justo
-            vehicula. Libero magna eleifend elit diam orci cursus arcu primis.
-            Suspendisse faucibus nunc dignissim nullam fermentum lacinia feugiat
-            mi imperdiet diam. Elit venenatis proin lacinia. Nisi velit non
-            consectetur viverra taciti eleifend class. Vel massa turpis lorem
-            nascetur maecenas egestas sapien duis. Dui per felis nunc sed. Sed
-            mi sem porttitor. Etiam convallis nisl luctus vivamus hac cursus
-            tortor? Magnis blandit aliquet suspendisse dis netus non interdum!
-            Tempus varius sodales nibh. Fermentum ullamcorper fusce nulla nisi
-            euismod mauris pellentesque orci nunc vitae. Tristique quis congue
-            quisque gravida. Torquent ante posuere montes sociis tempus nibh
-            lectus. Risus nibh sit nec molestie tincidunt eget taciti netus.
-          </p>
-        </div>
-      </div>
-  
-      <!-- Section 3 -->
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title"> Common C++ Data Types </p>
-        </div>
-
-        <!-- Paragraph 3 -->
-        <div class="plain-text">
-          <p class="subtle-fade">
-            Sagittis varius nisi feugiat duis. Aptent egestas lectus, per
-            vulputate porttitor proin augue urna. Pretium leo placerat fermentum
-            penatibus, mauris iaculis fringilla ac. Laoreet scelerisque ipsum
-            vitae hac sit condimentum semper.
-
-             <!-- Unordered List - (Bullet Points) -->
-             <div class="subtle-fade">
-            <ul class="bullet-points"> <div class = "middle-list">
-              <li> std::string </li>
-              <li> int </li>
-              <li> double </li>
-            </div>
-            </ul>
-          </div>
-
-          </p>
-        </div>
-      </div>
-
-      <!-- Section 4 -->
-      <div class="section">
-        <div class="section-header">
-          <div class="subtle-fade">
-          <p class="section-title"> What is an Object? </p>
-        </div>
-        </div>          
-          
-      </div>
-
+    </div>
   </body>
 </html>

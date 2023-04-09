@@ -1,12 +1,12 @@
 body {
-  background-color: #302c30;
+  background-color: #2a2727;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 300s;
   color: #f4eee0;
 }
 
 .text-container {
-  border: 8px solid #6d5d6e;
+  border: 0px solid #181716;
   border-radius: 30px;
 }
 
