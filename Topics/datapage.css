@@ -97,6 +97,10 @@ body {
   width: 60%;
 }
 
+.center-text {
+  text-align: center;
+}
+
 /* .resize-img {
   position: relative;
   height: 100px;

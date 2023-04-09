@@ -4,29 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class Design in C++</title>
+    <title>Simplify CPP - Class Design</title>
     <link rel="stylesheet" href="../datapage.css" />
     <script defer src="../fadingAnimation.js"></script>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Design in C++</title>
+    <link rel="stylesheet" href="Topics/datapage.css" />
+    <script defer src="Topics/fadingAnimation.js"></script>
   </head>
   <body>
     <!-- Category -->
     <div class="text-container">
       <div class="title-box">
         <p class="category-title">Class Design in C++</p>
-      </div>
-
-      <!-- Section 1 -->
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title">What is a Class?</p>
-        </div>
-
-        <!-- Paragraph 1 -->
-        <div class="plain-text">
-          <p class="subtle-fade">
-            In C++, a class is a user-defined data type that combines data members (variables) and member functions (methods) into a single unit. Classes provide a way to create objects, which are instances of the class. By using classes, we can encapsulate data and functionality, making it easier to manage and organize complex code.
-          </p>
-        </div>
       </div>
 
       <!-- Section 2 -->
@@ -84,58 +81,6 @@ private:
           </p>
         </div>
       </div>
-      <div class="section">
-        <div class="section-header">
-          <p class="section-title">Constructors and Destructors</p>
-        </div>
-    
-        <!-- Paragraph 4 -->
-        <div class="plain-text">
-          <p class="subtle-fade">
-            Constructors and destructors are special member functions of a class that are automatically called when an object is created or destroyed, respectively. 
-    
-            <ul class="bullet-points">
-              <li> Constructor: Initializes the object's data members and can perform other setup tasks. Constructors have the same name as the class and do not have a return type. </li>
-              <li> Destructor: Releases any resources allocated by the object and performs other cleanup tasks. Destructors have the same name as the class, preceded by a tilde (~), and do not have a return type. </li>
-            </ul>
-    
-            For example:
-    
-            <pre><code>class MyClass {
-              public:
-MyClass() { // constructor
-// initialization code
-}
-
-~MyClass() { // destructor
-// cleanup code
-}
-};</code></pre>
-</p>
-</div>
-</div>
-
-<!-- Section 5 -->
-<div class="section">
-  <div class="section-header">
-    <p class="section-title">Inheritance</p>
-  </div>
-
-  <!-- Paragraph 5 -->
-  <div class="plain-text">
-    <p class="subtle-fade">
-      Inheritance is a way to create a new class (called a derived class) from an existing class (called a base class). The derived class inherits the data members and member functions of the base class, allowing for code reuse and modularity.
-
-      To inherit from a base class, use the colon (:) and the 'public' keyword, followed by the base class name:
-
-      <pre><code>class DerivedClass : public BaseClass {
-        // additional members
-};</code></pre> In this example, 'DerivedClass' inherits from 'BaseClass'. Derived classes can also override or extend the functionality of the base class by providing new implementations for inherited member functions.
-</p>
-</div>
-</div>
-</div>
-</div>
-</body>
+    </div>
+  </body>
 </html>
-
