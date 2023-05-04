@@ -13,7 +13,7 @@ Due to this being our very first hackathon and having almost no experience in fr
 
 2. Design a smooth, simple, and satisfying page layout for our website
 
-3. Condense common C++ topics into a digestible, beginner friendly synopsis
+3. Condense common C++ topics into a digestible, beginner friendly synopsis, tailored specifically for students
 
 We originally attempted to use ReactJS to build our website to be compatible with both computers and mobile devices. However, this proved to be counter-productive for complete front-end  beginners, and we decided to built it entirely in plain HTML, CSS, and JS instead. Overall, we are proud of our end result, and our main regret is losing time to ReactJS which could've been used to finish up adding content to all of our pages. 
 
